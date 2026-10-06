@@ -14,10 +14,10 @@ Credenciais e arquivos auxiliares de publicação ficam fora do Git (`.env.local
 
 A configuração da hospedagem define redirecionamentos 301 de HTTP, www e index.html para https://datalys.com.br/, preservando parâmetros, e Cache-Control: no-cache. A configuração original e as versões anteriores estão preservadas em `.deployment/`.
 
-Pendência identificada na revisão pública: a URL literal `/` ainda retorna uma versão antiga mantida pelo cache NGINX, sem os metadados de compartilhamento e SEO. Uma consulta com parâmetro novo recebe o arquivo atualizado e as regras corretas. É necessário limpar ou desativar esse cache no cPanel e verificar novamente a URL principal. A conta FTP não oferece acesso a esse controle.
+Publicação confirmada em 06/10/2026: a URL literal https://datalys.com.br/ entrega o HTML atual, idêntico ao arquivo local, com metadados de compartilhamento e SEO e Cache-Control: no-cache. Googlebot e o crawler de compartilhamento também recebem essa versão. HTTP, www e index.html redirecionam com 301 para a URL canônica. A cópia antiga do cache NGINX não apareceu na verificação final.
 
 Compartilhamento: metadados Open Graph e Twitter Card apontam para `assets/datalys-logo-social-v1.jpg`, cópia exata da logo original, com dimensões declaradas de 1408 × 768. O ícone público `assets/datalys-icon-256.png` substitui o antigo favicon inline para permitir rastreamento pelos buscadores.
 
 SEO: título e descrição revisados, endereço canônico HTTPS, metadado robots, dados estruturados JSON-LD de Organization, WebSite, WebPage e serviços. `robots.txt` libera o rastreamento e indica `sitemap.xml`, que contém a única página canônica. O conteúdo e os metadados são entregues no HTML, sem depender de JavaScript para os robôs.
 
-O IndexNow usa um arquivo público de verificação na hospedagem; sua configuração e os registros de envio ficam em `.deployment/`, fora do Git. Aceitação de uma notificação não confirma indexação. Prévia no WhatsApp e exibição em buscadores dependem do processamento das plataformas.
+O IndexNow usa um arquivo público de verificação na hospedagem. A notificação da URL canônica foi enviada ao Bing em 06/10/2026 e retornou HTTP 202. A configuração e os registros de envio ficam em `.deployment/`, fora do Git. Aceitação de uma notificação não confirma indexação. Prévia no WhatsApp e exibição em buscadores dependem do processamento das plataformas.
