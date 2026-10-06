@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://datalys.com.br/sitemap.xml

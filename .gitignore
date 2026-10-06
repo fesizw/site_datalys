@@ -1,5 +1,9 @@
 # CakePHP 3
 
+# Credenciais locais e backups da hospedagem
+.env.local
+.deployment/
+
 /vendor/*
 /config/app.php
 
