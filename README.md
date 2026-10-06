@@ -2,13 +2,13 @@
 
 Site institucional da Datalys, publicado em https://datalys.com.br/.
 
-O código completo está em `index.html`: HTML5, Tailwind CSS via CDN, CSS de apoio e JavaScript. Não exige instalação nem compilação. Para visualizar localmente, abra o arquivo em um navegador.
+O código completo está em `index.html`: HTML5, Tailwind CSS via CDN, CSS de apoio e JavaScript. Não exige instalação nem compilação. O CDN é carregado com defer e configuração após load; o CSS local mantém o layout e usa site-container para evitar colisões com a biblioteca. Para visualizar localmente, abra o arquivo em um navegador.
 
-Inclui navegação responsiva, painel demonstrativo com seleção de período e tabela acessível, animações que respeitam movimento reduzido, formulário validado e aviso de privacidade. Sem JavaScript, a navegação móvel permanece no fluxo da página e o aviso de privacidade pode ser acessado por links nativos.
+Inclui navegação responsiva, painel demonstrativo com seleção de período e tabela acessível, animações que respeitam movimento reduzido, formulário validado e aviso de privacidade. Sem JavaScript, a navegação móvel permanece no fluxo da página e o aviso de privacidade pode ser acessado por links nativos. O gráfico inicial corresponde aos dados da tabela, e seus controles ficam desabilitados até a instalação dos eventos. O foco revela imediatamente os elementos animados e fecha o menu móvel ao sair do cabeçalho.
 
-O contato está configurado para `faleconosco@datalys.com.br`. O formulário prepara uma mensagem no aplicativo de e-mail do visitante; ele precisa concluir o envio nesse aplicativo. Também permite copiar ou baixar o texto, atualizado quando os campos são editados. Se o aplicativo não abrir, a mensagem permanece disponível. Para integrar um serviço de envio, ajuste `CONTACT_CONFIG.endpoint` no HTML com uma URL HTTPS que aceite os campos via POST de FormData.
+O contato está configurado para `faleconosco@datalys.com.br`. O formulário prepara uma mensagem no aplicativo de e-mail do visitante; ele precisa concluir o envio nesse aplicativo. O formulário explica esse fluxo antes do clique. Também permite copiar ou baixar o texto, atualizado quando os campos são editados. Se o aplicativo não abrir, a mensagem permanece disponível. Para integrar um serviço de envio, ajuste `CONTACT_CONFIG.endpoint` no HTML com uma URL HTTPS que aceite os campos via POST de FormData.
 
-Revisão de 06/10/2026: HTML sem erros no Nu HTML Checker; testes de comportamento em DOM simulado para menu, Escape, foco no redimensionamento, cliques modificados, gráfico/tabela, formulário, atualização da mensagem e diálogo. Branco sobre cobre tem contraste aproximado de 6:1. A renderização em navegador e a experiência com leitores de tela reais não foram verificadas neste ambiente; a revisão não certifica conformidade completa com WCAG.
+Revisão de 06/10/2026: HTML sem erros no Nu HTML Checker; testes de comportamento em DOM simulado para menu, Escape, foco no redimensionamento, cliques modificados, saída do menu por foco, foco durante animações, consistência entre gráfico inicial e interativo, controles sem JS, formulário, atualização da mensagem e diálogo. Branco sobre cobre tem contraste aproximado de 6:1. A renderização em navegador e a experiência com leitores de tela reais não foram verificadas neste ambiente; a revisão não certifica conformidade completa com WCAG.
 
 Credenciais e arquivos auxiliares de publicação ficam fora do Git (`.env.local` e `.deployment/`).
 
