@@ -1,8 +1,9 @@
 # CakePHP 3
 
-# Credenciais locais e backups da hospedagem
+# Credenciais locais, contexto temporário e backups da hospedagem
 .env.local
 .deployment/
+/tmp/
 
 /vendor/*
 /config/app.php
